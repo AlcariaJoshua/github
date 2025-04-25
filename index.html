@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
+  </head>
+  <body>
+    <section class="userDashboard">
+      <div class="wrapper">
+        <div class="content">
+          <div class="sidebar">
+            <ul>
+              <li>
+                <a href="#" data-target="profile">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="toggle-subnav" data-target="order">Order</a>
+                <ul class="subnav">
+                  <li><a href="#" data-target="order1">Order 1</a></li>
+                  <li><a href="#" data-target="order2">Order 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#" data-target="ecommerce">E-commerce</a></li>
+              <li><a href="#" data-target="transaction">Transaction</a></li>
+            </ul>
+          </div>
+
+          <div class="main" id="main-content">
+            <div class="profile" id="profile">
+              <img src="./images/product2.jpg" alt="" />
+              <div class="details">
+                <p>Name: John Doe</p>
+                <p>Age: 22</p>
+                <p>Sex: Male</p>
+                <p>Address: unknown</p>
+              </div>
+            </div>
+
+            <div id="order1" class="content-section">
+              <!-- Order 1 content goes here -->
+              <h2>Order 1 Details</h2>
+            </div>
+            <div id="order2" class="content-section">
+              <!-- Order 2 content goes here -->
+              <h2>Order 2 Details</h2>
+            </div>
+            <div id="ecommerce" class="content-section">
+              <!-- E-commerce content goes here -->
+              <h2>E-commerce Content</h2>
+            </div>
+            <div id="transaction" class="content-section">
+              <!-- Transaction content goes here -->
+              <h2>Transaction Content</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   <a href="" class="cta">
+    click me
+   </a>
+
+
+    <script>
+      // Toggle subnav on click
+      document.querySelectorAll(".toggle-subnav").forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const subnav = this.nextElementSibling;
+          subnav.classList.toggle("active");
+        });
+      });
+
+      //sidebar
+
+      // Accordion logic
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const isOpen = content.style.maxHeight;
+          document
+            .querySelectorAll(".accordion-content")
+            .forEach((c) => (c.style.maxHeight = null));
+          if (!isOpen) content.style.maxHeight = content.scrollHeight + "px";
+        });
+      });
+
+      // Tab switch logic
+      const links = document.querySelectorAll("[data-target]");
+      const contents = document.querySelectorAll(".tab-content");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          const targetId = link.getAttribute("data-target");
+
+          // Switch content
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+          document.getElementById(targetId).classList.add("active");
+
+          // Switch link active class
+          links.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

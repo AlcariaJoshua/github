@@ -1,0 +1,26 @@
+.cta{
+    padding: 10px;
+    background-color: $background-color;
+    @include respond-to(mobile){
+        background-color: #000;
+        color: #fff;
+    }
+    @include font-size(20px, 1.5, bolder);
+
+    &:hover{
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+
+}
+
+
+.card {
+    border: none;
+    background-color: $primary-color;
+    border-radius: 10px;
+}
+
+
+

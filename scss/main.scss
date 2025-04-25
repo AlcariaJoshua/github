@@ -1,7 +1,5 @@
-$primary-color: #007bff;
-
-
-body{
-    font-family: sans-serif;
-    background-color: $primary-color;
-}
+@import 'variables';    // Your own variables
+@import 'mixins';       // Your mixins, which might use those variables
+@import 'base';         // Base (like resets, typography)
+@import 'components';   // Reusable components
+@import 'userdashboard'; // Page or section-specific styles

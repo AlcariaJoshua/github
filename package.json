@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "uikit": "^3.23.6"
+  },
+  "scripts": {
+    "sass": "sass --watch scss/main.scss css/main.css"
+  }
+}

@@ -1,0 +1,73 @@
+.userDashboard {
+  padding: 80px 50px;
+
+  .content {
+    display: flex;
+    gap: 30px;
+    @include respond-to(mobile){
+        flex-direction: column;
+    }
+
+    .sidebar {
+      width: 30%;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 30px 20px;
+
+      ul {
+        li {
+          a {
+            padding: 20px;
+            width: -webkit-fill-available;
+            color: #000;
+            position: relative;
+
+            &:hover {
+              color: #f3790d;
+              text-decoration: none;
+            }
+          }
+
+          .subnav {
+            display: none;
+          }
+
+          .active {
+            display: block;
+          }
+        }
+      }
+
+     
+
+    }
+
+    .main{
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 30px 20px;
+        width: 70%;
+      }
+  }
+
+}
+
+
+.profile {
+    display: flex;
+    gap: 30px;
+    img{
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 100px;
+
+    }
+
+    p{
+        @include font-size(50px, 1.2, bolder)
+    }
+}
+
+

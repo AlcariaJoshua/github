@@ -1,0 +1,59 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin respond-xl{
+    @media(max-width: 1199px){
+        @content;
+    }
+}
+
+
+@mixin respond-lg{
+    @media(max-width: 992px){
+        @content;
+    }
+}
+
+@mixin repond-md{
+    @media(max-width: 768px){
+        @content;
+    }
+}
+
+@mixin repond-sm{
+    @media(max-width: 576px){
+        @content;
+    }
+}
+
+
+@mixin respond-to($device){
+    @if $device == deskstop{
+        @media(max-width: 1399px){
+            @content;
+        }
+    }
+
+    @else if $device == tablet{
+        @media(max-width: 991px){
+            @content;
+        }
+    }
+
+    @else if $device == mobile{
+        @media(max-width: 768px){
+            @content;
+        }
+    }
+}
+
+@mixin font-size($size, $line-height: 1.5, $font-weight: normal){
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+li {
+  list-style: none;
+  display: block;
+}
+
+ul {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.cta {
+  padding: 10px;
+  background-color: #F3790D;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: bolder;
+}
+@media (max-width: 768px) {
+  .cta {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.cta:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+.card {
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.userDashboard {
+  padding: 80px 50px;
+}
+.userDashboard .content {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .userDashboard .content {
+    flex-direction: column;
+  }
+}
+.userDashboard .content .sidebar {
+  width: 30%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.userDashboard .content .sidebar ul li a {
+  padding: 20px;
+  width: -webkit-fill-available;
+  color: #000;
+  position: relative;
+}
+.userDashboard .content .sidebar ul li a:hover {
+  color: #f3790d;
+  text-decoration: none;
+}
+.userDashboard .content .sidebar ul li .subnav {
+  display: none;
+}
+.userDashboard .content .sidebar ul li .active {
+  display: block;
+}
+.userDashboard .content .main {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 70%;
+}
+
+.profile {
+  display: flex;
+  gap: 30px;
+}
+.profile img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 100px;
+}
+.profile p {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=main.css.map */
